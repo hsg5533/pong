@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #333 0%, #000 90%);
+  font-family: "Press Start 2P", monospace;
+  overflow: hidden;
+}
+#gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
+/* 메뉴 패널 */
+#menuPanel,
+#gameOverPanel {
+  margin-top: 20px;
+  text-align: center;
+  color: #0ff; /* 네온 색상 */
+}
+.hidden {
+  display: none;
+}
+
+.menu-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0ff;
+}
+.menu-item {
+  margin: 5px 0;
+}
+.menu-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: #111;
+  color: #0ff;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+  transition: 0.2s;
+}
+.menu-button:hover {
+  background: #000;
+  box-shadow: 0 0 14px #0ff;
+}
+
+/* 체크박스 */
+#autoPlayLeftCheck {
+  transform: scale(1.2);
+  accent-color: #0ff; /* 지원되는 브라우저에서 체크 표시 색상 */
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* 난이도 선택 Select 태그 네온 스타일 */
+#difficultySelect {
+  background-color: #111;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 8px #0ff;
+  color: #0ff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+#difficultySelect:focus {
+  outline: none;
+  box-shadow: 0 0 12px #0ff;
+}
+/* 옵션 디자인 */
+#difficultySelect option {
+  background-color: #333;
+  color: #0ff;
+  font-family: "Press Start 2P", monospace;
+}
+
+/* 게임 캔버스 */
+canvas {
+  display: block;
+  background: #111;
+  border: 2px solid #0ff;
+  box-shadow: 0 0 20px #0ff;
+  margin-top: 10px;
+}

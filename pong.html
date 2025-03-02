@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pong - 전체 고도화 (네온 디자인 + 난이도 선택)</title>
+    <!-- 레트로 폰트 (Press Start 2P) -->
+    <link rel="stylesheet" href="./css/fontface.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="gameWrapper">
+      <!-- 메인 메뉴 (처음에 표시) -->
+      <div id="menuPanel">
+        <div class="menu-title">PONG GAME</div>
+
+        <!-- 난이도 선택 -->
+        <div class="menu-item">
+          <label for="difficultySelect">Difficulty:</label>
+          <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <!-- 왼쪽 패들 자동 플레이 -->
+        <div class="menu-item">
+          <label>
+            Left Paddle AI
+            <input type="checkbox" id="autoPlayLeftCheck" />
+          </label>
+        </div>
+
+        <!-- 게임 시작 버튼 -->
+        <div class="menu-item">
+          <button class="menu-button" id="startButton">Start Game</button>
+        </div>
+      </div>
+
+      <!-- 게임 캔버스 -->
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+      <!-- 게임 종료 화면 (승패 결정 시 표시) -->
+      <div id="gameOverPanel" class="hidden">
+        <div class="menu-title" id="gameOverTitle">Game Over</div>
+        <div class="menu-item">
+          <button class="menu-button" id="restartButton">Restart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메인 스크립트 (ES 모듈) -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
